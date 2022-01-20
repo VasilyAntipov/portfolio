@@ -1,0 +1,125 @@
+.shuffle {
+    margin: auto;
+    padding-bottom: 50px;
+    text-align: center;
+
+    .gallery {
+        padding-top: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        height: auto;
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        .shuffle-card {
+            height: auto;
+            width: auto;
+
+            &.exit {
+                position: absolute;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+                z-index: 0;
+            }
+
+            &.enter {
+                z-index: 1;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+            }
+
+            &.scale-enter {
+                animation-name: slide-scale-enter;
+            }
+
+            &.left-exit {
+                animation-name: slide-left-exit;
+            }
+
+            &.left-enter {
+                animation-name: slide-left-enter;
+            }
+
+            &.right-exit {
+                animation-name: slide-right-exit;
+            }
+
+            &.right-enter {
+                animation-name: slide-right-enter;
+            }
+
+            &.bottom-exit {
+                animation-name: slide-bottom-exit;
+            }
+
+            &.bottom-enter {
+                animation-name: slide-bottom-enter;
+            }
+
+            @keyframes slide-left-exit {
+                from {
+                    transform: translate(0, 0) scale(1);
+                }
+                to {
+                    transform: translate(calc(-1 * var(--widthCard)), 0) scale(0);
+                }
+            }
+
+            @keyframes slide-left-enter {
+                from {
+                    transform: translate(calc(-1 * var(--widthCard)), 0) scale(0);
+                }
+                to {
+                    transform: translate(0, 0) scale(1);
+                }
+            }
+
+            @keyframes slide-scale-enter {
+                from {
+                    transform: scale(0);
+                }
+                to {
+                    transform: scale(1);
+                }
+            }
+
+            @keyframes slide-right-exit {
+                from {
+                    transform: translate(0, 0) scale(1);
+                }
+                to {
+                    transform: translate(var(--widthCard), 0) scale(0);
+                }
+            }
+
+            @keyframes slide-right-enter {
+                from {
+                    transform: translate(var(--widthCard), 0) scale(0);
+                }
+                to {
+                    transform: translate(0, 0) scale(1);
+                }
+            }
+
+            @keyframes slide-bottom-exit {
+                from {
+                    transform: translate(0, 0) scale(1);
+                }
+                to {
+                    transform: translate(0, var(--heightCard)) scale(0);
+                }
+            }
+
+            @keyframes slide-bottom-enter {
+                from {
+                    transform: translate(0, var(--heightCard)) scale(0);
+                }
+                to {
+                    transform: translate(0, 0) scale(1);
+                }
+            }
+        }
+    }
+}

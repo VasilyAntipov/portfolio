@@ -1,0 +1,76 @@
+.app {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    .flex {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main {
+        .navbar-wrapper {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(27, 36, 47);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .about {
+            width: 100%;
+            background-color: white;
+            height: auto;
+            position: relative;
+            padding-bottom: 100px;
+            .heading {
+                padding-top: 50px;
+            }
+        }
+        .portfolio-wrapper {
+            overflow-x: hidden;
+            height: auto;
+            background-color: rgb(245, 245, 245);
+            padding-bottom: 50px;
+        }
+        .contacts {
+            height: 100vh;
+            // position: absolute;
+            .heading {
+                padding-top: 100px;
+            }
+        }
+    }
+}
+
+.sticker {
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    z-index: 10000;
+    color: red;
+}
+
+
+.fade-modal-enter {
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.fade-modal-enter-active {
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.fade-modal-exit {
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+.fade-modal-exit-active {
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}

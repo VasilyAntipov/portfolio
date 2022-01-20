@@ -1,0 +1,21 @@
+.about-first {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+    .quality {
+        padding-left: 25px;
+    }
+}
+.about-next {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    .photo {
+        padding-right: 50px;
+    }
+}

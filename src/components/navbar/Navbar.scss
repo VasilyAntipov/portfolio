@@ -1,0 +1,17 @@
+.navbar {
+    .links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        .link {
+            color: white;
+            font-size: 1.2rem;
+            padding-left: 20px;
+            &:hover {
+                color: rgb(230,78,108);
+                cursor: pointer;
+            }
+        }
+    }
+}
