@@ -1,0 +1,13 @@
+.contacts {
+    background-color: rgb(37, 41, 52);
+    position: relative;
+    .heading {
+        color: white;
+        margin-top: 50px;
+    }
+    svg {
+        left: 0;
+        top: 0;
+        position: absolute;
+    }
+}

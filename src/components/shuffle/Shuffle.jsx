@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import './Shuffle.scss'
 import { TransitionLink } from './components/transitionLink/TransitionLink'
 
 export const Shuffle = (props) => {
     const {
-        heightCard = '300px',
-        widthCard = '400px',
+        heightCard = 300,
+        widthCard = 400,
         items,
         children,
         loadAnimate
@@ -14,10 +14,17 @@ export const Shuffle = (props) => {
 
     const [activeGroup, setActiveGroup] = useState(0)
     const [classes, setClasses] = useState([])
-
+    const [offsetY, setOffsetY] = useState(0)
+    const ref = useRef()
     const groups = ['All', ...new Set(items.map(items => items.group))]
 
     const handleGroupClick = (indexGroup) => {
+        if (indexGroup === activeGroup)
+            return
+
+        const { y } = ref.current.getBoundingClientRect()
+
+        setOffsetY(y)
         setActiveGroup(indexGroup)
 
         const classesTypes = {
@@ -63,23 +70,27 @@ export const Shuffle = (props) => {
             ))
     }
 
-
     return (
         <div
             className="shuffle"
             style={{
-                '--heightCard': heightCard,
-                '--widthCard': widthCard,
+                '--heightCard': `${heightCard}px`,
+                '--widthCard': `${widthCard}px`,
+                '--offsetY': `${offsetY}px`,
             }}
         >
+
+
             <TransitionLink
                 groups={groups}
                 activeGroup={activeGroup}
                 setActiveGroup={setActiveGroup}
                 handleGroupClick={handleGroupClick}
             />
+
             <div
                 className="gallery"
+                ref={ref}
             >
                 {items.map(({ index, group, ...props }) => {
                     const itemClass = classes.filter(el => el.index === index)
@@ -91,10 +102,13 @@ export const Shuffle = (props) => {
                                 activeGroup === 0
                                     ? 'shuffle-card enter scale-enter'
                                     : group === groups[activeGroup]
-                                        ? 'shuffle-card ' + itemClass[0].enter
+                                        ? 'shuffle-card scale-enter ' + itemClass[0].enter
                                         : 'shuffle-card ' + itemClass[0].exit
                             }
-                            style={{ animationPlayState: loadAnimate ? 'running' : 'paused' }}
+                            style={{
+                                animationPlayState: loadAnimate ? 'running' : 'paused',
+
+                            }}
                         >
                             {childrenWithProps({ index, group, ...props })}
                         </div>
@@ -102,7 +116,6 @@ export const Shuffle = (props) => {
 
                 })}
             </div>
-        </div>
+        </div >
     );
 }
-    

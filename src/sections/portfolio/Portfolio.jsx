@@ -24,8 +24,8 @@ export const Portfolio = ({ items, setModalData }) => {
                     <Shuffle
                         loadAnimate={loadAnimate}
                         items={items}
-                        widthCard='400px'
-                        heightCard='300px'
+                        widthCard={400}
+                        heightCard={300}
                     >
                         <Card
                             setModalData={setModalData}

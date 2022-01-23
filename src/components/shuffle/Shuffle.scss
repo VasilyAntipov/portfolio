@@ -1,8 +1,9 @@
 .shuffle {
+    --offsetY: 0;
     margin: auto;
     padding-bottom: 50px;
     text-align: center;
-
+    position: relative;
     .gallery {
         padding-top: 25px;
         display: flex;
@@ -13,15 +14,17 @@
         width: 80%;
         margin: auto;
         overflow: hidden;
+
         .shuffle-card {
             height: auto;
             width: auto;
 
             &.exit {
-                position: absolute;
+                position: fixed;
                 animation-duration: 1s;
                 animation-fill-mode: forwards;
                 z-index: 0;
+                top: calc(var(--offsetY) + 100px);
             }
 
             &.enter {

@@ -21,7 +21,8 @@
     }
     .modal {
         width: calc(100% / 2.3);
-        height: calc(100% / 1.4);
+        height: auto;
+        min-width: 600px;
         background-color: white;
         position: absolute;
         transform: scale(0.8);
@@ -57,6 +58,9 @@
                 border: 2px solid rgb(230, 78, 108);
                 transition: all 0.5s;
                 font-size: 1.1rem;
+                position: absolute;
+                bottom: 25px;
+                
                 &:hover {
                     background-color: rgb(230, 78, 108);
                     color: white;

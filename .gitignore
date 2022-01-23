@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-
+/public/*.jpg
 # production
 /build
 

@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import './App.scss'
 import { Navbar } from './components/navbar/Navbar';
 import { scrollTo } from './utilities/scrollTo/scrollTo';
-import { Intro } from './pages/intro/Intro';
-import { About } from './pages/about/About';
-import { Portfolio } from './pages/portfolio/Portfolio'
-import { Contacts } from './pages/contacts/Contacts';
+import { Intro } from './sections/intro/Intro';
+import { About } from './sections/about/About';
+import { Portfolio } from './sections/portfolio/Portfolio'
+import { Contacts } from './sections/contacts/Contacts';
 import { Modal } from './components/modal/Modal'
 
 export default function App() {
@@ -44,7 +44,7 @@ export default function App() {
             group: 'React',
             name: 'asdasd',
             image: '/thumb3.jpg',
-            text: 'Shop',
+            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam saepe corporis velit quisquam explicabo nesciunt vitae adipisci est harum voluptate',
             link: 'https://vk.com',
             slides: ['slide1.jpg', 'slide1.jpg', 'slide1.jpg']
         },
