@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Card.scss'
 
 export const Card = (props) => {
-    const { image, name, text, link, group, setModalData, slides, index } = props
+    const { image, name, text, link, group, setModalData, slides, index, git } = props
     const [isActive, setIsActive] = useState(false)
 
     return (
@@ -17,7 +17,7 @@ export const Card = (props) => {
         >
             <div
                 className={'card__inner ' + (isActive ? 'active' : '')}
-                style={{ backgroundImage: image?  `url(${image})` : 'url(https://picsum.photos/300/400)'}}
+                style={{ backgroundImage: image ? `url(${image})` : 'url(https://picsum.photos/300/400)' }}
             >
             </div >
 
@@ -34,7 +34,7 @@ export const Card = (props) => {
                 <button
                     className="card__button"
                     onClick={() => {
-                        setModalData({ slides, text, link, name })
+                        setModalData({ slides, text, link, name, git })
                     }}
                 >
                     See more

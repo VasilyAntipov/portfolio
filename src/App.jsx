@@ -46,6 +46,7 @@ export default function App() {
             text: 'Fullstack e-shop developed on frontend: React, Redux, Sagas, Material-ui design, backend:  nodeJS, expressJS, PostgreSQL, sequelize.js. Contains verification using tokens, admin panel, pagination, etc.',
             link: 'https://shop.froggy.pw',
             slides: ['slide-shop1.png', 'slide-shop2.png', 'slide-shop3.png'],
+            git: 'https://github.com/VasilyAntipov/shop'
         },
         {
             index: 2,
@@ -54,7 +55,8 @@ export default function App() {
             image: '/slide-chess3.png',
             text: 'Chessmate client on VanillaJS,logical and mathematical calculations',
             link: 'https://chess.froggy.com',
-            slides: ['slide-chess1.png', 'slide-chess2.png', 'slide-chess3.png']
+            slides: ['slide-chess1.png', 'slide-chess2.png', 'slide-chess3.png'],
+            git: 'https://github.com/VasilyAntipov/chess'
         },
         {
             index: 3,
@@ -63,7 +65,8 @@ export default function App() {
             // image: '/shorts-slide1.png',
             text: 'ShortLink',
             link: 'https://shorts.froggy.com',
-            slides: ['slide-shorts1.png', 'slide-shorts2.png', 'slide-shorts3.png']
+            slides: ['slide-shorts1.png', 'slide-shorts2.png', 'slide-shorts3.png'],
+            git: ''
         },
         {
             index: 4,
@@ -72,7 +75,8 @@ export default function App() {
             image: '/slide-portfolio1.png',
             text: 'Chess',
             link: 'https://froggy.com',
-            slides: ['slide-portfolio2.png', 'slide-portfolio3.png']
+            slides: ['slide-portfolio2.png', 'slide-portfolio3.png'],
+            git: 'https://github.com/VasilyAntipov/portfolio'
         },
         {
             index: 5,
@@ -81,7 +85,8 @@ export default function App() {
             // image: '/slide-films.png',
             text: 'Test',
             link: 'https://vk.com',
-            slides: ['slide-films1.png', 'slide-films2.png', 'slide-films3.png']
+            slides: ['slide-films1.png', 'slide-films2.png', 'slide-films3.png'],
+            git: ''
         },
     ]
 

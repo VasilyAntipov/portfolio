@@ -52,7 +52,7 @@ export const Modal = (props) => {
                         >View Site</button>
                         <button className="modal-button git"
                             onClick={() => {
-                                window.open(modalData.link);
+                                window.open(modalData.git);
                             }}
 
                         >View Git</button>
