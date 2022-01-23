@@ -17,7 +17,7 @@ export const Card = (props) => {
         >
             <div
                 className={'card__inner ' + (isActive ? 'active' : '')}
-                style={{ backgroundImage: `url(${image})` }}
+                style={{ backgroundImage: image?  `url(${image})` : 'url(https://picsum.photos/300/400)'}}
             >
             </div >
 
@@ -39,7 +39,7 @@ export const Card = (props) => {
                 >
                     See more
                 </button>
-                
+
             </div>
         </div>
     )

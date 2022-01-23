@@ -36,89 +36,53 @@ export default function App() {
         { name: ' Express', skill: '65%' },
         { name: ' Postgre/MSSQL', skill: '50%' },
     ]
-    
+
     const projects = [
         {
             index: 1,
             group: 'React',
-            name: 'asdasd',
-            image: '/thumb3.jpg',
-            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam saepe corporis velit quisquam explicabo nesciunt vitae adipisci est harum voluptate',
-            link: 'https://vk.com',
-            slides: ['slide1.jpg', 'slide1.jpg', 'slide1.jpg']
+            name: 'Online-shop',
+            image: '/slide-shop1.png',
+            text: 'Fullstack e-shop developed on frontend: React, Redux, Sagas, Material-ui design, backend:  nodeJS, expressJS, PostgreSQL, sequelize.js. Contains verification using tokens, admin panel, pagination, etc.',
+            link: 'https://shop.froggy.pw',
+            slides: ['slide-shop1.png', 'slide-shop2.png', 'slide-shop3.png'],
         },
         {
             index: 2,
             group: 'JavaScript',
-            name: 'Films',
-            image: '/thumb4.jpg',
-            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, beatae!',
-            link: 'https://vk.com',
-            slides: ['slide2.jpg', 'slide3.jpg', 'slide4.jpg']
+            name: 'Chess',
+            image: '/slide-chess3.png',
+            text: 'Chessmate client on VanillaJS,logical and mathematical calculations',
+            link: 'https://chess.froggy.com',
+            slides: ['slide-chess1.png', 'slide-chess2.png', 'slide-chess3.png']
         },
         {
             index: 3,
             group: 'Next',
             name: 'ShortLink',
-            image: '/thumb5.jpg',
+            // image: '/shorts-slide1.png',
             text: 'ShortLink',
-            link: 'https://vk.com',
-            slides: ['slide1.jpg', 'slide1.jpg', 'slide1.jpg']
+            link: 'https://shorts.froggy.com',
+            slides: ['slide-shorts1.png', 'slide-shorts2.png', 'slide-shorts3.png']
         },
         {
             index: 4,
             group: 'React',
-            name: 'Chess',
-            image: '/thumb1.jpg',
+            name: 'Portfolio',
+            image: '/slide-portfolio1.png',
             text: 'Chess',
-            link: 'https://vk.com',
-            slides: ['slide1.jpg', 'slide1.jpg', 'slide1.jpg']
+            link: 'https://froggy.com',
+            slides: ['slide-portfolio2.png', 'slide-portfolio3.png']
         },
         {
             index: 5,
-            group: 'JavaScript',
-            name: 'Test',
-            image: '/thumb2.jpg',
+            group: 'React',
+            name: 'Films',
+            // image: '/slide-films.png',
             text: 'Test',
             link: 'https://vk.com',
-            slides: ['slide1.jpg', 'slide1.jpg', 'slide1.jpg']
+            slides: ['slide-films1.png', 'slide-films2.png', 'slide-films3.png']
         },
-        {
-            index: 6,
-            group: 'Next',
-            name: 'react1',
-            image: '/thumb6.jpg',
-            text: 'react1',
-            link: 'https://vk.com',
-            slides: ['slide1.jpg', 'slide1.jpg', 'slide1.jpg']
-        },
-        {
-            index: 7,
-            group: 'React',
-            name: 'react2',
-            image: '/thumb7.jpg',
-            text: 'react2',
-            link: 'https://vk.com',
-            slides: ['slide1.jpg', 'slide1.jpg', 'slide1.jpg']
-        },
-        {
-            index: 8,
-            group: 'React',
-            name: 'SSR',
-            image: '/thumb8.jpg',
-            text: 'SSR',
-            link: 'https://vk.com',
-            slides: ['slide1.jpg', 'slide1.jpg', 'slide1.jpg']
-        },
-        {
-            index: 9,
-            group: 'Next',
-            name: 'SSR1',
-            image: '/thumb9.jpg',
-            text: 'SSR1',
-            link: 'https://vk.com',
-            slides: ['slide1.jpg', 'slide1.jpg', 'slide1.jpg']
-        }
     ]
 
     const [modalData, setModalData] = useState(null)
