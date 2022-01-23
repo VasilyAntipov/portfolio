@@ -21,8 +21,9 @@ export const Contacts = ({ className }) => {
             >
                 <path d="M0 0 L50 100 L100 0 Z" fill="white" stroke="white"></path>
             </svg>
-
-            <Mailer />
+            <div className="mailer-wrapper">
+                <Mailer />
+            </div>
         </div>
     )
 }

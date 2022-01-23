@@ -25,7 +25,7 @@ export const About = (props) => {
                         viewport={{ once: true }}
                         size={100}
                         styleIn={{ backgroundColor: 'rgb(105, 209, 223)' }}
-                        styleOut={{ padding: '25px', width: '200px' }}
+                        styleOut={{ padding: '25px', width: '250px' }}
                     />
 
                 ))}
@@ -40,7 +40,7 @@ export const About = (props) => {
                     size={300}
                     styleIn={{ backgroundImage: 'url(http://placekitten.com/360/360)' }}
                     styleOut={{ width: '300px' }}
-                    text={'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus nemo vero beatae nesciunt quaerat dignissimos eum facilis provident officiis culpa porro impedit excepturi, accusamus neque tempore distinctio! Ut, corrupti error!'}
+                    text={'I am a frontend developer. I like the development of animated components, responsive design. I know a little backend, I know how to work in databases, but I focus on Javascript framework React'}
                 />
                 <Graph
                     className="graph"

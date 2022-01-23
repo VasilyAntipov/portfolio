@@ -37,8 +37,9 @@ export const Card = (props) => {
                         setModalData({ slides, text, link, name })
                     }}
                 >
-                    Узнать больше
+                    See more
                 </button>
+                
             </div>
         </div>
     )

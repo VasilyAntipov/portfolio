@@ -11,10 +11,10 @@ import { Modal } from './components/modal/Modal'
 export default function App() {
 
     const hexagonItems = [
-        { head: 'Fast', text: `Fast load times and lag free interaction, my highest priority.` },
-        { head: 'Responsive', text: `My layouts will work on any device, big or small.` },
-        { head: 'Intuitive', text: `Strong preference for easy to use, intuitive UX/UI.` },
-        { head: 'Fast', text: `Websites don't have to be static, I love making pages come to life.` }
+        { head: 'Personal qualities', text: `Fast learn new directions in programming, workteam, responsiveness` },
+        { head: 'Adaptive', text: `Experience in adaptive and cross-browser layout` },
+        { head: 'OOP knowledge', text: `Understanding of design principles, object oriented programming` },
+        { head: 'Rest/Websocket', text: `Understanding client-server interaction (WebSocket, REST)` }
     ]
 
     const links = [
@@ -31,8 +31,7 @@ export default function App() {
         { name: ' React', skill: '80%' },
         { name: ' Redux', skill: '80%' },
         { name: ' NextJS', skill: '80%' },
-        { name: ' UI/UX', skill: '80%' },
-        { name: ' AnimateJS/Framer', skill: '80%' },
+        { name: ' UI/UX design', skill: '80%' },
         { name: ' Node.js', skill: '65%' },
         { name: ' Express', skill: '65%' },
         { name: ' Postgre/MSSQL', skill: '50%' },

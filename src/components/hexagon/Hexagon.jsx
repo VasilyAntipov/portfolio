@@ -24,7 +24,7 @@ export const Hexagon = ({ text, head, size, styleIn, styleOut, className, ...pro
             {(text || head) && (
                 <div className="hex-text"
                 >
-                    <h1>{head}</h1>
+                    <h2>{head}</h2>
                     <p>{text}</p>
                 </div>
             )}

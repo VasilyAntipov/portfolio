@@ -1,0 +1,50 @@
+/* Базовый стиль формы */
+.mailer {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+    width: auto;
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+
+    :nth-child(n) {
+        font-family: "Open Sans", sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        color: white;
+        margin-top: 5px;
+        border: none;
+        width: 100%;
+    }
+    .label {
+        color: rgb(81, 174, 190);
+        padding-bottom: 50px;
+    }
+
+    input {
+        background: rgb(30, 36, 44);
+        height: 35px;
+    }
+    textarea {
+        background: rgb(30, 36, 44);
+        min-width: 500px;
+        height: 200px;
+    }
+    .button-wrapper {
+        display: flex;
+        justify-content: right;
+        width: 100%;
+        button {
+            width: 150px;
+            height: 40px;
+            background-color: transparent;
+            border: 1px solid white;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                background-color: #04c2c9;
+            }
+        }
+    }
+}

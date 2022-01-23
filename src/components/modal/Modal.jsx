@@ -50,6 +50,12 @@ export const Modal = (props) => {
                             }}
 
                         >View Site</button>
+                        <button className="modal-button git"
+                            onClick={() => {
+                                window.open(modalData.link);
+                            }}
+
+                        >View Git</button>
                     </div>
                 }
             </div>

@@ -25,7 +25,7 @@ export const Navbar = ({ className, links, ...props }) => {
                         key={el.to}
                         onClick={() => scrollTo(el.to)}
                         initial={{ fontSize: 0 }}
-                        transition={{ duration: '0.6', delay: index * 0.3 + 1 }}
+                        transition={{ duration: '0.6', delay: index * 0.3  }}
                         whileInView={{ fontSize: '1.2rem' }}
                         viewport={{ once: true }}
                     >

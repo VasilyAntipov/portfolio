@@ -2,6 +2,7 @@
     width: 100%;
     position: relative;
     text-align: center;
+
     .flex {
         align-items: center;
         display: flex;
@@ -44,18 +45,6 @@
     }
 }
 
-.sticker {
-    bottom: 0;
-    right: 0;
-    position: fixed;
-    width: 200px;
-    height: 200px;
-    background-color: red;
-    z-index: 10000;
-    color: red;
-}
-
-
 .fade-modal-enter {
     opacity: 0;
     transition: all 1s ease-in-out;
@@ -74,3 +63,4 @@
     opacity: 0;
     transition: all 1s ease-in-out;
 }
+
