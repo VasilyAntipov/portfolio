@@ -1,0 +1,40 @@
+.animate-button {
+    margin-top: 1.5rem;
+    font-size: var(--fz-normal);
+    height: 50px;
+    width: 200px;
+    background-color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    
+    &.primary {
+        color: white;
+        border: 2px solid var(--secondary-color);
+        &:hover {
+            background-color: var(--primary-color);
+            border: none;
+            color: white;
+        }
+    }
+    &.secondary {
+        color: black;
+        border: 2px solid var(--secondary-color);
+        &:hover {
+            background-color: var(--secondary-color);
+            border: none;
+            color: white;
+        }
+    }
+}
+@media (max-width: 400px) {
+    .animate-button {
+        width: 150px;
+        height: 45px;
+        margin-top: 1.1rem;
+    }
+}

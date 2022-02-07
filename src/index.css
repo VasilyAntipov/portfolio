@@ -3,3 +3,38 @@
     padding: 0;
     font-family: "Open Sans", sans-serif;
 }
+
+#root {
+    width: 100%;
+    overflow: clip;
+    --primary-color: #04c2c9;
+    --secondary-color: tomato;
+    --light-primary: white;
+    --light-secondary: #F5F5F5;
+    --dark-primary: black;
+    --dark-secondary: #252934;
+    --fz-small: 1rem;
+    --fz-normal: 1.5rem;
+    --fz-big: 2rem;
+    --fz-biggest: 2.2rem;
+
+}
+
+@media (max-width: 1000px) and (min-width: 400px) {
+    #root {
+        --fz-small: 0.9rem;
+        --fz-normal: 1.3rem;
+        --fz-big: 1.6rem;
+        --fz-biggest: 1.9rem;
+    }
+}
+
+
+@media (max-width: 400px) {
+    #root {
+        --fz-small: 0.8rem;
+        --fz-normal: 1rem;
+        --fz-big: 1.3rem;
+        --fz-biggest: 1.6rem;
+    }
+}

@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import './Card.scss'
+import {Button} from '../button/Button'
 
 export const Card = (props) => {
-    const { image, name, text, link, group, setModalData, slides, index, git } = props
+    const { image, name, text, link, groups, setModalData, slides, index, git } = props
     const [isActive, setIsActive] = useState(false)
 
     return (
@@ -25,20 +26,20 @@ export const Card = (props) => {
                 className={'card__text ' + (isActive ? 'active' : '')}
             >
                 <p className="name">{name}</p>
-                <p className="group">{group}</p>
+                <p className="group">{groups.join(',')}</p>
             </div>
 
             <div
                 className={"card__button__wrapper " + (isActive ? 'active' : '')}
             >
-                <button
-                    className="card__button"
+                <Button
+                    className="secondary"
                     onClick={() => {
                         setModalData({ slides, text, link, name, git })
                     }}
                 >
                     See more
-                </button>
+                </Button>
 
             </div>
         </div>

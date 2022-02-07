@@ -1,27 +1,36 @@
 .app {
-    width: 100%;
-    position: relative;
-    text-align: center;
+    min-width: 320px;
 
     .flex {
         align-items: center;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
+        flex-wrap: wrap;
+        &.column {
+            flex-direction: column;
+        }
     }
 
     .main {
+        // position: 
+        .intro-wrapper {
+            height: calc(100vh + 50px);
+            width: 100%;
+        }
         .navbar-wrapper {
+            height: auto;
+            width: 100%;
             margin: 0;
             padding: 0;
-            background-color: rgb(27, 36, 47);
-            position: sticky;
+            background-color: var(--dark-primary);
             top: 0;
             z-index: 100;
+            position: sticky;
         }
-        .about {
+        .about-wrapper {
             width: 100%;
-            background-color: white;
+            background-color: var(--light-primary);
             height: auto;
             position: relative;
             padding-bottom: 100px;
@@ -32,35 +41,15 @@
         .portfolio-wrapper {
             overflow-x: hidden;
             height: auto;
-            background-color: rgb(245, 245, 245);
+            background-color: var(--light-secondary);
             padding-bottom: 50px;
         }
         .contacts {
             height: 100vh;
-            // position: absolute;
             .heading {
                 padding-top: 100px;
             }
         }
     }
-}
-
-.fade-modal-enter {
-    opacity: 0;
-    transition: all 1s ease-in-out;
-}
-
-.fade-modal-enter-active {
-    opacity: 1;
-    transition: all 1s ease-in-out;
-}
-
-.fade-modal-exit {
-    opacity: 1;
-    transition: all 1s ease-in-out;
-}
-.fade-modal-exit-active {
-    opacity: 0;
-    transition: all 1s ease-in-out;
 }
 

@@ -11,7 +11,7 @@ export const Line = ({ lang, skill, load, ...props }) => {
             >
                 <div
                     className="lang-skill"
-                    style={{ width: load ? skill : 0 }}
+                    style={{ width: load ? `${skill * 100 / 5}%` : 0 }}
                 >
                 </div>
                 <div className="skill">{skill}</div>

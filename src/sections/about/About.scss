@@ -1,21 +1,17 @@
-.about-first {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    margin: auto;
-    padding-top: 20px;
-    .quality {
-        padding-left: 25px;
+.about {
+    padding-top: 50px;
+    .about-first {
+        position: relative;
+        width: 80%;
+        margin: auto;
+        padding-top: 20px;
     }
-}
-.about-next {
-    width: 80%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    .photo {
-        padding-right: 100px;
+    .about-next {
+        width: 80%;
+        margin: auto;
+        margin-top: 50px;
+        .graph-wrapper {
+            margin: 10px;
+        }
     }
 }

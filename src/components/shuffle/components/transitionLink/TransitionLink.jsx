@@ -15,22 +15,20 @@ const useSize = (target) => {
 }
 
 export const TransitionLink = (props) => {
-    const { groups, activeGroup = 0, handleGroupClick} = props
+    const { filters, activeGroup = 0, handleGroupClick} = props
 
     const ref = useRef(null)
     const [style, setStyle] = useState({})
 
     const size = useSize(ref)
 
-
     useEffect(() => {
         setStyle({
             left: ref.current.childNodes[activeGroup].offsetLeft,
+            top: ref.current.childNodes[activeGroup].offsetTop,
             width: ref.current.childNodes[activeGroup].clientWidth
         })
     }, [size, activeGroup])
-
-
 
     return (
         <motion.div
@@ -50,14 +48,18 @@ export const TransitionLink = (props) => {
                     className="buttons"
                     ref={ref}
                 >
-                    {groups.map((item, index) => (
+                    {filters.map((item, index) => (
                         <div
                             key={item}
                             className={index === activeGroup ? 'button active' : 'button'}
                             onClick={(e) => {
                                 setStyle({
                                     left: ref.current.childNodes[0].offsetLeft,
-                                    transform: `translate(${e.target.offsetLeft - ref.current.childNodes[0].offsetLeft}px, 0)`,
+                                    top: ref.current.childNodes[0].offsetTop,
+                                    transform: `translate(
+                                        ${e.target.offsetLeft - ref.current.childNodes[0].offsetLeft}px, 
+                                        ${e.target.offsetTop - ref.current.childNodes[0].offsetTop}px, 
+                                        )`,
                                     width: e.target.clientWidth,
                                 })
                                 handleGroupClick(index)

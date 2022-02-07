@@ -1,33 +1,53 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Hexagon.scss'
 import { motion } from 'framer-motion'
+import { HexImage } from './components/HexImage'
+export const Hexagon = ({ frontContent, backContent, size = 250, frontFill, backFill, ...props }) => {
+    const [showBackward, setShowBackward] = useState(false)
 
-export const Hexagon = ({ text, head, size, styleIn, styleOut, className, ...props }) => {
-
+    const handleClick = () => {
+        setShowBackward(old => !old)
+    }
     return (
-        <motion.div
-            className={"hex-wrapper " + className}
-            style={{ ...styleOut }}
+        <div
+            className={"hex-wrapper flex"}
             {...props}
+            style={{ '--size': `${size}px` }}
+            onClick={handleClick}
         >
+
             <div
-                className="hexagon"
-                style={{ height: size, width: size * 2 }}
+                className="front"
+                style={showBackward ? { transform: 'rotateY(-180deg)' } : {}}
             >
-                <div className="hexagon-in1">
-                    <div className="hexagon-in2"
-                        style={styleIn}
-                    >
-                    </div>
+                <HexImage
+                    background={frontFill}
+                />
+                <div className="front-content">
+                    {frontContent}
                 </div>
             </div>
-            {(text || head) && (
-                <div className="hex-text"
+            <div className="back"
+                style={showBackward ? { transform: 'rotateY(0deg)', } : {}}
+            >
+                <HexImage
+
+                    background={backFill}
+                />
+                <div className="back-content" style={
+                    showBackward
+                        ? {
+                            opacity: 1,
+                            transitionProperty: 'opacity',
+                            transitionDuration: '0.5s',
+                            transitionDelay: '0.5s',
+                            transitionTimingFunction: 'ease-in-out',
+                        }
+                        : {}}
                 >
-                    <h2>{head}</h2>
-                    <p>{text}</p>
+                    {backContent}
                 </div>
-            )}
-        </motion.div>
+            </div>
+        </div >
     )
 }

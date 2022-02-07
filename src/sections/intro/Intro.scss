@@ -1,29 +1,13 @@
 .intro {
     scroll-behavior: smooth;
     color: white;
-    background-color: rgb(37, 41, 52);
-    height: calc(100vh + 50px);
-
+    background-color: var(--dark-secondary);
+    height: 100%;
+    font-size: var(--fz-biggest);
     p {
-        font-size: 2rem;
+        text-align: center;
     }
-    .btn-scroll {
-        font-size: 1.1rem;
-        color: white;
-        height: 50px;
-        width: 200px;
-        background-color: transparent;
-        border: 2px solid white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition-property: background-color;
-        transition-duration: 0.3s;
-        transition-timing-function: ease-in-out;
-        &:hover {
-            background-color: #04c2c9;
-            border: none;
-        }
+    .scroll-btn {
         .icon {
             transition: transform 0.2s ease-in-out;
         }

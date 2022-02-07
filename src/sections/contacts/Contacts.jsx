@@ -19,7 +19,7 @@ export const Contacts = ({ className }) => {
                 style={{ height: 75, width: '100%' }}
                 preserveAspectRatio='none'
             >
-                <path d="M0 0 L50 100 L100 0 Z" fill="white" stroke="white"></path>
+                <path d="M0 0 L50 100 L100 0 Z" fill="#F5F5F5" stroke="white"></path>
             </svg>
             <div className="mailer-wrapper">
                 <Mailer />

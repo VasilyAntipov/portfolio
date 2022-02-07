@@ -1,26 +1,22 @@
 import React from 'react'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import './Intro.scss'
+import { Button } from '../../components/button/Button'
 export const Intro = (props) => {
-    const { className, onClick } = props
+    const { onClick } = props
     return (
-        <div className={className}>
-            <div className="flex">
-                <p style={{
-                    paddingBottom: 15,
-                }}>
-                Hello! I'm Antipov Vasily, frontend developer
-            </p>
-            <button
-                className="btn-scroll"
+        <div className="intro flex column">
+            <p>Привет! Я Антипов Василий,</p>
+            <p>фронтенд разработчик</p>
+            <Button
                 onClick={onClick}
+                className="primary scroll-btn"
             >
-                My works
+                Мои работы
                 <ArrowForwardIcon
                     className="icon"
                 />
-            </button>
-        </div>
+            </Button>
         </div >
     )
 }

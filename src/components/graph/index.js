@@ -10,6 +10,7 @@ const Graph = ({ className, items, ...props }) => {
             className={className}
             {...props}
         >
+            <h4 style={{textAlign:'center', width: '100%'}}>Опыт работы</h4>
             {
                 items.map((el, ) => (
                     <Line
