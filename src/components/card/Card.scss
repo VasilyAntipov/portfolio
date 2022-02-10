@@ -3,7 +3,7 @@
     width: 100%;
     height: 100%;
     position: relative;
-    z-index: 100;
+    z-index: 10;
     .card__inner {
         width: var(--widthCard);
         height: var(--heightCard);
@@ -12,7 +12,7 @@
         overflow: hidden;
         transition: all 0.3s ease-in-out;
         opacity: 1;
-            &.active {
+        &.active {
             opacity: 0;
         }
     }
@@ -64,13 +64,5 @@
                 color: white;
             }
         }
-    }
-}
-
-@media (max-width: 400px) {
-    .card {
-        --widthCard: 90vw;
-        --heightCard: calc(var(--widthCard) * 2 / 3);
-        min-width: 200px;
     }
 }

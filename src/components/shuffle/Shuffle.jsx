@@ -1,16 +1,12 @@
 import React, { useState, useRef, useEffect, useLayoutEffect, } from 'react'
 import './Shuffle.scss'
 import { TransitionLink } from './components/transitionLink/TransitionLink'
-import { ShuffleCard } from './ShuffleCard'
 import useResizeObserver from '@react-hook/resize-observer'
 
 export const Shuffle = (props) => {
     const {
-        heightCard = 300,
-        widthCard = 400,
         items,
         children,
-        loadAnimate
     } = props
 
 
@@ -95,7 +91,7 @@ export const Shuffle = (props) => {
         const elemIsVisible = groups.find(elem => elem === filters[activeGroup])
         if (elemIsVisible) {
             return (
-                <ShuffleCard
+                <div
                     id={'shuffleCard' + index}
                     key={index}
                     className='shuffle-card'
@@ -106,11 +102,11 @@ export const Shuffle = (props) => {
                     }}
                 >
                     {childrenWithProps({ index, groups, ...props })}
-                </ShuffleCard >
+                </div >
             )
         } else {
             return (
-                <ShuffleCard
+                <div
                     id={'shuffleCard' + index}
                     key={index}
                     className='shuffle-card'
@@ -122,7 +118,7 @@ export const Shuffle = (props) => {
                         top: coordinates[index].top,
                     }}
                 >
-                </ShuffleCard >
+                </div >
             )
         }
     })
@@ -130,10 +126,6 @@ export const Shuffle = (props) => {
     return (
         <div
             className="shuffle flex"
-            style={{
-                '--heightCard': `${heightCard}px`,
-                '--widthCard': `${widthCard}px`,
-            }}
         >
             <TransitionLink
                 filters={filters}

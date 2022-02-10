@@ -10,7 +10,7 @@ export const Contacts = ({ className }) => {
             className="contacts"
         >
             <Heading
-                head="CONTACTS"
+                head="КОНТАКТЫ"
                 className="heading"
             />
             <svg

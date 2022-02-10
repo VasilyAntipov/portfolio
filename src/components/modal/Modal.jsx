@@ -43,19 +43,21 @@ export const Modal = (props) => {
                 {modalData &&
                     <div className="modal-content">
                         <h1 className="modal-head">{modalData.name}</h1>
-                        <div className="modal-text">{modalData.text}</div>
-                        <button className="modal-button"
-                            onClick={() => {
-                                window.open(modalData.link);
-                            }}
+                        <p className="modal-text">{modalData.text}</p>
+                        <div className="buttons">
+                            <button className="modal-button site"
+                                onClick={() => {
+                                    window.open(modalData.link);
+                                }}
 
-                        >View Site</button>
-                        <button className="modal-button git"
-                            onClick={() => {
-                                window.open(modalData.git);
-                            }}
+                            >Сайт</button>
+                            <button className="modal-button git"
+                                onClick={() => {
+                                    window.open(modalData.git);
+                                }}
 
-                        >View Git</button>
+                            >Git</button>
+                        </div>
                     </div>
                 }
             </div>

@@ -3,9 +3,11 @@
     margin: auto;
     padding-bottom: 50px;
     text-align: center;
+    --widthCard: 400px;
+    --heightCard: 300px;
     .gallery-container {
         position: relative;
-        width: 70%;
+        width: 80%;
         height: auto;
         margin-top: 50px;
         overflow: hidden;
@@ -20,10 +22,10 @@
                 position: absolute;
                 width: var(--widthCard);
                 height: var(--heightCard);
-                z-index: 300;
-                background-color: tomato;
-                outline:1px dashed black;
-                outline-offset:-1px;
+                background-color: rgb(179, 174, 174);
+                background-color: white;
+                outline: 1px dashed black;
+                outline-offset: -1px;
             }
         }
 
@@ -33,6 +35,7 @@
             flex-direction: row;
             justify-content: center;
             z-index: 0;
+            width: 100%;
             .card-mask {
                 width: var(--widthCard);
                 height: var(--heightCard);
@@ -44,13 +47,15 @@
     }
 
     @media (max-width: 1000px) {
-        .gallery-mask {
+        .gallery-container {
             width: 100%;
         }
     }
-    @media (max-width: 1000px) {
-        .gallery {
-            width: 100%;
-        }
+}
+
+@media (max-width: 320px) {
+    .shuffle {
+        --widthCard: 320px;
+        --heightCard: 270px;
     }
 }

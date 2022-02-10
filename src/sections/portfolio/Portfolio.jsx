@@ -17,7 +17,7 @@ export const Portfolio = ({ items, setModalData }) => {
                 }}
             >
                 <Heading
-                    head="PORTFOLIO"
+                    head="ПОРТФОЛИО"
                     className="heading"
                 />
                 <div className="carousel-wrap">

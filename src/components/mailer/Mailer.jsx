@@ -19,18 +19,18 @@ export const Mailer = () => {
             onSubmit={handleSubmit}
             className="mailer"
         >
-            <div className="label">Have a question or want to work together?</div>
+            <div className="label">Хотите задать вопрос или поработать вместе?</div>
             <input
                 id="name"
                 type="text"
                 name="name"
-                placeholder="Name"
+                placeholder="Имя"
             />
             <input
                 id="email"
                 type="email"
                 name="email"
-                placeholder="Enter email"
+                placeholder="E-mail"
             />
             <ValidationError
                 prefix="Email"
@@ -40,7 +40,7 @@ export const Mailer = () => {
             <textarea
                 id="message"
                 name="message"
-                placeholder='Your Message'
+                placeholder='Ваше сообщение'
             />
             <ValidationError
                 prefix="Message"
@@ -52,7 +52,7 @@ export const Mailer = () => {
                     type="submit"
                     disabled={state.submitting}
                 >
-                    Submit
+                    Отправить
                 </button>
             </div>
         </form>
