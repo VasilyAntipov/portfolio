@@ -10,7 +10,7 @@ export const Intro = (props) => {
             <p>фронтенд разработчик</p>
             <Button
                 onClick={onClick}
-                className="primary scroll-btn"
+                className="primary normal scroll-btn"
             >
                 Мои работы
                 <ArrowForwardIcon

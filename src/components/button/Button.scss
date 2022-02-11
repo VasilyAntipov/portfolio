@@ -1,6 +1,6 @@
 .animate-button {
     margin-top: 1.5rem;
-    font-size: var(--fz-normal);
+
     height: 50px;
     width: 200px;
     background-color: transparent;
@@ -29,6 +29,12 @@
             border: none;
             color: white;
         }
+    }
+    &.small {
+        font-size: var(--fz-small);
+    }
+    &.normal {
+        font-size: var(--fz-normal);
     }
 }
 @media (max-width: 400px) {
